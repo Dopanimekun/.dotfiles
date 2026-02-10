@@ -1,0 +1,12 @@
+/* vibrant colorscheme */
+
+* {
+  bg0: #0033CC;
+  bg1: #0066FF;
+  bg2: #009944;
+  bg3: #8800CC;
+  fg0: #3399FF;
+  fg1: #33FF99;
+  fg2: #FF33CC;
+  fg3: #FFEE00;
+ }

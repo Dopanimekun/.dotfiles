@@ -1,0 +1,12 @@
+/* pastel colorscheme */ 
+
+* {
+  bg0: #6C8CFF;
+  bg1: #8FB8FF;
+  bg2: #7FD9A6;
+  bg3: #C79BFF;
+  fg0: #AFCBFF;
+  fg1: #B8FFD9;
+  fg2: #FFB3E6;
+  fg3: #FFF6A5;
+ }

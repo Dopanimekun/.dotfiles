@@ -1,0 +1,8 @@
+configuration {
+    modi: "drun,run,window";
+    icon-theme: "Papirus";
+    drun-display-format: "{icon} {name}";
+    font: "BigBlueTermPlus Nerd Font Mono 12";
+}
+
+@theme "theme/NewJeans/main.rasi"

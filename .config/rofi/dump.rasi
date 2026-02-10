@@ -1,0 +1,223 @@
+/**
+ * rofi -dump-theme output.
+ * Rofi version: 2.0.0
+ **/
+* {
+    alternate-urgent-background: var(lightbg);
+    alternate-active-foreground: var(blue);
+    selected-active-background:  var(blue);
+    selected-urgent-foreground:  var(background);
+    urgent:                      var(accent);
+    padding:                     0;
+    text-color:                  var(fg0);
+    normal-foreground:           var(foreground);
+    bg0:                         rgba ( 31, 31, 31, 50 % );
+    background:                  rgba ( 253, 246, 227, 100 % );
+    alternate-normal-foreground: var(foreground);
+    urgent-foreground:           var(red);
+    active-background:           var(background);
+    selected-normal-background:  var(lightfg);
+    blue:                        rgba ( 38, 139, 210, 100 % );
+    selected-urgent-background:  var(red);
+    selected-active-foreground:  var(background);
+    font:                        "Roboto 10";
+    separatorcolor:              var(foreground);
+    bg1:                         rgba ( 32, 32, 32, 75 % );
+    lightfg:                     rgba ( 88, 104, 117, 100 % );
+    alternate-active-background: var(lightbg);
+    bg2:                         rgba ( 44, 44, 44, 100 % );
+    spacing:                     0;
+    alternate-urgent-foreground: var(red);
+    margin:                      0;
+    lightbg:                     rgba ( 238, 232, 213, 100 % );
+    red:                         rgba ( 220, 50, 47, 100 % );
+    accent:                      rgba ( 96, 205, 255, 100 % );
+    background-color:            transparent;
+    border-color:                var(foreground);
+    foreground:                  rgba ( 0, 43, 54, 100 % );
+    normal-background:           var(background);
+    fg0:                         White;
+    alternate-normal-background: var(lightbg);
+    selected-normal-foreground:  var(lightbg);
+    urgent-background:           var(background);
+    active-foreground:           var(blue);
+    fg1:                         rgba ( 206, 206, 206, 100 % );
+    bg3:                         rgba ( 57, 57, 57, 75 % );
+}
+element {
+    padding:       8px ;
+    orientation:   vertical;
+    cursor:        pointer;
+    spacing:       4px ;
+    border:        0;
+    border-radius: 2px ;
+}
+element normal.normal {
+    background-color: var(normal-background);
+    text-color:       var(normal-foreground);
+}
+element normal.urgent {
+    background-color: var(urgent-background);
+    text-color:       var(urgent);
+}
+element normal.active {
+    background-color: var(active-background);
+    text-color:       var(accent);
+}
+element selected {
+    background-color: var(bg3);
+}
+element selected.normal {
+    background-color: var(selected-normal-background);
+    text-color:       var(selected-normal-foreground);
+}
+element selected.urgent {
+    background-color: var(urgent);
+    text-color:       var(selected-urgent-foreground);
+}
+element selected.active {
+    background-color: var(selected-active-background);
+    text-color:       var(accent);
+}
+element alternate.normal {
+    background-color: var(alternate-normal-background);
+    text-color:       var(alternate-normal-foreground);
+}
+element alternate.urgent {
+    background-color: var(alternate-urgent-background);
+    text-color:       var(alternate-urgent-foreground);
+}
+element alternate.active {
+    background-color: var(alternate-active-background);
+    text-color:       var(accent);
+}
+element-text {
+    horizontal-align: 0.50;
+    background-color: transparent;
+    cursor:           pointer;
+    highlight:        inherit;
+    vertical-align:   0.50;
+    text-color:       inherit;
+}
+element-icon {
+    background-color: transparent;
+    size:             2.0000em ;
+    cursor:           pointer;
+    vertical-align:   0.50;
+    text-color:       inherit;
+}
+window {
+    padding:          5;
+    width:            600px ;
+    location:         south;
+    background-color: var(bg1);
+    border-radius:    8px ;
+    y-offset:         4294967292px ;
+    border:           1;
+    height:           600px ;
+}
+mainbox {
+    padding: 24px ;
+    spacing: 24px ;
+    border:  0;
+}
+message {
+    padding:      1px ;
+    border-color: var(separatorcolor);
+    border:       2px dash 0px 0px ;
+}
+textbox {
+    padding:          4px 8px ;
+    background-color: var(bg2);
+    text-color:       var(foreground);
+}
+listview {
+    fixed-columns: true;
+    padding:       2px 0px 0px ;
+    scrollbar:     true;
+    fixed-height:  true;
+    border-color:  var(separatorcolor);
+    columns:       6;
+    spacing:       8px ;
+    border:        2px dash 0px 0px ;
+}
+scrollbar {
+    width:        4px ;
+    padding:      0;
+    cursor:       pointer;
+    handle-width: 8px ;
+    border:       0;
+    handle-color: var(normal-foreground);
+}
+sidebar {
+    border-color: var(separatorcolor);
+    border:       2px dash 0px 0px ;
+}
+button {
+    cursor:     pointer;
+    spacing:    0;
+    text-color: var(normal-foreground);
+}
+button selected {
+    background-color: var(selected-normal-background);
+    text-color:       var(selected-normal-foreground);
+}
+num-filtered-rows {
+    expand:     false;
+    text-color: Gray;
+}
+num-rows {
+    expand:     false;
+    text-color: Gray;
+}
+textbox-num-sep {
+    expand:     false;
+    str:        "/";
+    text-color: Gray;
+}
+inputbar {
+    text-color:       var(normal-foreground);
+    padding:          8px ;
+    children:         [ "icon-search","entry" ];
+    background-color: var(bg0);
+    border-radius:    2px ;
+    border-color:     var(accent);
+    border:           0px 0px 2px ;
+    spacing:          4px ;
+}
+overlay {
+    padding:          0px 0.2000em ;
+    background-color: var(normal-foreground);
+    foreground-color: var(normal-background);
+    margin:           0px 0.2000em ;
+    text-color:       var(normal-background);
+}
+case-indicator {
+    spacing:    0;
+    text-color: var(normal-foreground);
+}
+entry {
+    text-color:        #FFFFFF;
+    cursor:            text;
+    vertical-align:    0.50;
+    font:              "Roboto 12";
+    spacing:           0;
+    placeholder-color: var(fg1);
+    placeholder:       "Type here to search";
+}
+prompt {
+    spacing:    0;
+    text-color: var(normal-foreground);
+}
+textbox-prompt-colon {
+    margin:     0px 0.3000em 0.0000em 0.0000em ;
+    expand:     false;
+    str:        ":";
+    text-color: inherit;
+}
+icon-search {
+    filename:       "search-symbolic";
+    vertical-align: 0.50;
+    expand:         false;
+    size:           24px ;
+}
