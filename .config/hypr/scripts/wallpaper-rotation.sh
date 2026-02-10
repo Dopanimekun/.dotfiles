@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-WALLPAPER_DIR="$HOME/Imagens/idol/MHDHH/wallpaper/theme1/"
+WALLPAPER_DIR="$HOME/Imagens/idol/MHDHH/wallpaper/theme2/"
 INTERVAL=300
 
 while true; do
