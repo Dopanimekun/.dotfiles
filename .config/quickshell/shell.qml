@@ -23,7 +23,8 @@ ShellRoot {
     property int fontSize: 14
 
     // System info properties
-    property string kernelVersion: "Linux"
+//    property string kernelVersion: "Linux"
+    property int batteryLevel: 0
     property int cpuUsage: 0
     property int memUsage: 0
     property int diskUsage: 0
@@ -35,17 +36,23 @@ ShellRoot {
     property var lastCpuIdle: 0
     property var lastCpuTotal: 0
 
-    // Kernel version
     Process {
-        id: kernelProc
-        command: ["uname", "-r"]
-        stdout: SplitParser {
-            onRead: data => {
-                if (data) kernelVersion = data.trim()
+    id: batteryProc
+    command: ["upower", "--monitor-detail"]
+    running: true
+
+    stdout: SplitParser {
+        onRead: data => {
+            if (data.includes("percentage:")) {
+                let value = parseInt(data.split(":")[1])
+                if (!isNaN(value)) {
+                    batteryLevel = value
+                }
             }
         }
-        Component.onCompleted: running = true
+      }
     }
+
 
     // CPU usage
     Process {
@@ -310,14 +317,14 @@ ShellRoot {
                         elide: Text.ElideRight
                         maximumLineCount: 1
                     }
-
+                   
                     Text {
-                        text: kernelVersion
-                        color: root.colRed
-                        font.pixelSize: root.fontSize
-                        font.family: root.fontFamily
-                        font.bold: true
-                        Layout.rightMargin: 8
+                      text: "Battery: " + batteryLevel + "%"
+                      color: root.colRed
+                      font.pixelSize: root.fontSize
+                      font.family: root.fontFamily
+                      font.bold: true
+                      Layout.rightMargin: 8
                     }
 
                     Rectangle {
