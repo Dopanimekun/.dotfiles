@@ -228,7 +228,7 @@ ShellRoot {
 
                         Image {
                             anchors.fill: parent
-                            source: "file:///home/tony/.config/quickshell/icons/tonybtw.png"
+                            source: "file:///home/dopanime/.config/kitty/images/bernice.png"
                             fillMode: Image.PreserveAspectFit
                         }
                     }
@@ -403,7 +403,7 @@ ShellRoot {
 
                     Text {
                         id: clockText
-                        text: Qt.formatDateTime(new Date(), "ddd, MMM dd - HH:mm")
+                        text: Qt.formatDateTime(new Date(), "HH:mm <-> ddd, MMM dd")
                         color: root.colCyan
                         font.pixelSize: root.fontSize
                         font.family: root.fontFamily
@@ -414,7 +414,7 @@ ShellRoot {
                             interval: 1000
                             running: true
                             repeat: true
-                            onTriggered: clockText.text = Qt.formatDateTime(new Date(), "ddd, MMM dd - HH:mm")
+                            onTriggered: clockText.text = Qt.formatDateTime(new Date(), "HH:mm <-> ddd, MMM dd")
                         }
                     }
 
