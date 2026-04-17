@@ -8,7 +8,7 @@ This is a hyprland setup in the end, some things might not work as well in other
 The dependecies are git, stow and An Answer to Your Wayland Wallpaper Woes (awww).
 For git and stow, install them using your package manager.
 
-In my case: pacman -Sy git stow
+In my case: pacman -Sy git stow awww
 
 For awww, you have to compile it by yourself. Just follow the instructions at https://codeberg.org/LGFae/awww.
 
