@@ -5,7 +5,7 @@ This is a hyprland setup in the end, some things might not work as well in other
 
 ## Dependecies
 
-The dependecies are git, stow and An Answer to Your Wayland Wallpaper Woes (aww).
+The dependecies are git, stow and An Answer to Your Wayland Wallpaper Woes (awww).
 For git and stow, install them using your package manager.
 
 In my case: pacman -Sy git stow
