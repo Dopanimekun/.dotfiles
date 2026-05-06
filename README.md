@@ -10,7 +10,7 @@ For git and stow, install them using your package manager.
 
 In my case: pacman -Sy git stow awww
 
-For awww, you have to compile it by yourself. Just follow the instructions at https://codeberg.org/LGFae/awww.
+For latest versions of awww, you have to compile it by yourself. Just follow the instructions at https://codeberg.org/LGFae/awww.
 
 ## Installation
 
