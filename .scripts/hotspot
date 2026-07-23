@@ -1,0 +1,83 @@
+#!/usr/bin/env bash
+set -Eeuo pipefail
+
+########################################
+# Configuração
+########################################
+HOTSPOT="Hotspot"
+WAN_IF="wlp4s0"
+LAN_IF="br0"
+TABLE="hotspot"
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+NFT_CONF="$SCRIPT_DIR/hotspot.nft"
+
+########################################
+# Firewall
+########################################
+create_rules() {
+  if [[ ! -f "$NFT_CONF" ]]; then
+    echo "Erro: arquivo de regras não encontrado em $NFT_CONF" >&2
+    exit 1
+  fi
+  sudo nft -D WAN_IF="$WAN_IF" -D LAN_IF="$LAN_IF" -f "$NFT_CONF"
+}
+
+remove_rules() {
+  sudo nft delete table inet "$TABLE" 2>/dev/null || true
+  sudo nft delete table ip "$TABLE" 2>/dev/null || true
+}
+
+########################################
+# Hotspot
+########################################
+start_hotspot() {
+  echo "Criando regras do firewall..."
+  remove_rules
+  create_rules
+  echo "Ativando hotspot..."
+  nmcli connection up "$HOTSPOT"
+  echo "Hotspot iniciado."
+}
+
+stop_hotspot() {
+  echo "Desligando hotspot..."
+  nmcli connection down "$HOTSPOT" || true
+  echo "Removendo regras..."
+  remove_rules
+  echo "Hotspot desligado."
+}
+
+status() {
+  echo
+  echo "========== Firewall =========="
+  sudo nft list table inet "$TABLE" 2>/dev/null || echo "Tabela inet inexistente."
+  echo
+  sudo nft list table ip "$TABLE" 2>/dev/null || echo "Tabela ip inexistente."
+  echo
+  echo "========== NetworkManager =========="
+  nmcli connection show --active
+}
+
+########################################
+# Main
+########################################
+case "${1:-}" in
+up | start)
+  start_hotspot
+  ;;
+down | stop)
+  stop_hotspot
+  ;;
+restart)
+  stop_hotspot
+  start_hotspot
+  ;;
+status)
+  status
+  ;;
+*)
+  echo "Uso: $0 {up|down|restart|status}"
+  exit 1
+  ;;
+esac
