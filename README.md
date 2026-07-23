@@ -1,25 +1,77 @@
-#
+# Dotfiles
 
-My dotfiles. Keep in my mind that i have a NVIDIA GPU, some of the configuration here are for fixing some issues (minor and major) with it.
-This is a hyprland setup in the end, some things might not work as well in other WM.
+My personal Linux configuration for **Hyprland**.
 
-## Dependecies
+This repository contains my complete desktop setup, including:
 
-The dependecies are git, stow and An Answer to Your Wayland Wallpaper Woes (awww).
-For git and stow, install them using your package manager.
+- Hyprland configuration
+- Desktop utilities
+- Scripts
+- Miscellaneous configuration files
+- **NewJeans Shell** (included as a Git submodule)
 
-In my case: pacman -Sy git stow awww
+> **Note**
+> 
+> I use an **NVIDIA GPU**, so some tweaks are specifically intended to improve compatibility and stability on NVIDIA hardware. While most of the configuration should work elsewhere, some adjustments may be necessary for AMD or Intel GPUs.
 
-For latest versions of awww, you have to compile it by yourself. Just follow the instructions at https://codeberg.org/LGFae/awww.
+## Repository Structure
+
+```
+.dotfiles/
+├── hypr/
+├── scripts/
+├── ...
+└── quickshell/
+    └── NewJeans Shell (Git submodule)
+```
+
+The QuickShell project is maintained separately to keep it modular and reusable.
+
+If you're only interested in the shell itself, visit:
+
+➡️ https://github.com/Dopanimekun/newjeans-shell
+
+## Dependencies
+
+Required packages:
+
+- git
+- GNU Stow
+- awww
+
+Install them using your distribution's package manager.
+
+Example for Arch Linux:
+
+```bash
+sudo pacman -S git stow awww
+```
+
+For the latest version of **awww**, build it from source following the instructions on its official repository:
+
+https://codeberg.org/LGFae/awww
 
 ## Installation
 
-First, clone this repo at your $HOME folder.
+Clone the repository recursively (to include the shell submodule):
 
-$ git clone 
-$ cd dotfiles
+```bash
+git clone --recursive https://github.com/Dopanimekun/.dotfiles.git ~/.dotfiles
+cd ~/.dotfiles
+```
 
-Then use GNU stow to create symlinks.
+If you've already cloned the repository without submodules:
 
-$ stow .
+```bash
+git submodule update --init --recursive
+```
 
+Create the symbolic links using GNU Stow:
+
+```bash
+stow .
+```
+
+## License
+
+This repository is provided as-is for anyone who wants to use it as inspiration or adapt parts of it to their own setup.
