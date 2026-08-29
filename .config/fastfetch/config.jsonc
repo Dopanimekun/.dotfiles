@@ -8,50 +8,47 @@
     "padding": {
       "top": 1,
       "left": 1,
-      "right": 1
+      "right": 1,
     },
   },
   "display": {
     "separator": " :: ",
     "color": {
-      "separator": "35"
+      "separator": "35",
     },
     "percent": {
-      "type": [
-        "num",
-        "num-color",
-      ],
+      "type": ["num", "num-color"],
       "ndigits": 0,
       "color": {
         "green": "32",
         "yellow": "93",
-        "red": "91"
+        "red": "91",
       },
       "spaceBeforeUnit": "default",
-      "width": 0
+      "width": 0,
     },
     "bar": {
       "char": {
         "elapsed": "●",
-        "total": "○"
+        "total": "○",
       },
       "border": {
         "left": "[",
         "right": "]",
         "leftElapsed": "",
-        "rightElapsed": ""
+        "rightElapsed": "",
       },
       "color": {
         "elapsed": "34",
         "total": "33",
-        "border": "32"
+        "border": "32",
       },
-      "width": 10
+      "width": 10,
     },
     "key": {
       "width": 0,
       "type": "both-1",
-      "paddingLeft": 0
+      "paddingLeft": 0,
     },
   },
   "general": {
@@ -59,7 +56,7 @@
     "processingTimeout": 5000,
     "detectVersion": true,
     "playerName": "",
-    "dsForceDrm": false
+    "dsForceDrm": false,
   },
   "modules": [
     "break",
@@ -76,29 +73,29 @@
     },*/
     {
       "type": "custom",
-      "format": "\u001b[38;5;159m╭─────────────────────── Setup ───────────────────────╮\u001b[0m"
+      "format": "\u001b[38;5;159m╭─────────────────────── Setup ───────────────────────╮\u001b[0m",
     },
     {
       "type": "host",
       "key": "\u001b[33mBoard\u001b[0m",
-      "keyIcon": "\u001b[38;5;159m├ 󰌢\u001b[0m"
+      "keyIcon": "\u001b[38;5;159m├ 󰌢\u001b[0m",
     },
     {
       "type": "os",
       "key": "\u001b[33mSystem\u001b[0m",
-      "keyIcon": "\u001b[38;5;159m├ \u001b[0m"
+      "keyIcon": "\u001b[38;5;159m├ \u001b[0m",
     },
     {
       "type": "kernel",
       "key": "\u001b[33mKernel\u001b[0m",
-      "keyIcon": "\u001b[38;5;159m├ \u001b[0m"
+      "keyIcon": "\u001b[38;5;159m├ \u001b[0m",
     },
-        {
+    {
       "type": "cpu",
       "key": "\u001b[33mCPU\u001b[0m",
       "keyIcon": "\u001b[38;5;159m├ \u001b[0m",
       "temp": false,
-      "showPeCoreCount": false
+      "showPeCoreCount": false,
     },
     {
       "type": "gpu",
@@ -111,57 +108,55 @@
       "percent": {
         "green": 50,
         "yellow": 80,
-        "type": 0
-      }
+        "type": 0,
+      },
     },
     {
       "type": "packages",
       "key": "\u001b[33mPackages\u001b[0m",
       "keyIcon": "\u001b[38;5;159m├ 󰏖\u001b[0m",
-      "disabled": [
-        "apk"
-      ],
-      "combined": false
+      "disabled": ["apk"],
+      "combined": false,
     },
     {
       "type": "custom",
-      "format": "\u001b[38;5;159m├────────────────────── Terminal ─────────────────────┤\u001b[0m"
+      "format": "\u001b[38;5;159m├────────────────────── Terminal ─────────────────────┤\u001b[0m",
     },
     {
       "type": "shell",
       "key": "\u001b[32mShell\u001b[0m",
-      "keyIcon": "\u001b[38;5;159m├ \u001b[0m"
+      "keyIcon": "\u001b[38;5;159m├ \u001b[0m",
     },
     {
       "type": "de",
       "key": "\u001b[32mDE\u001b[0m",
       "keyIcon": "\u001b[38;5;159m├ \u001b[0m",
-      "slowVersionDetection": false
+      "slowVersionDetection": false,
     },
     {
       "type": "wm",
       "key": "\u001b[32mWM\u001b[0m",
       "keyIcon": "\u001b[38;5;159m├ \u001b[0m",
-      "detectPlugin": false
+      "detectPlugin": false,
     },
     {
       "type": "font",
       "key": "\u001b[32mSystem Font\u001b[0m",
-      "keyIcon": "\u001b[38;5;159m├ \u001b[0m"
+      "keyIcon": "\u001b[38;5;159m├ \u001b[0m",
     },
     {
       "type": "terminal",
       "key": "\u001b[32mTerminal\u001b[0m",
-      "keyIcon": "\u001b[38;5;159m├ \u001b[0m"
+      "keyIcon": "\u001b[38;5;159m├ \u001b[0m",
     },
     {
       "type": "terminalfont",
       "key": "\u001b[32mTerminal Font\u001b[0m",
-      "keyIcon": "\u001b[38;5;159m├ \u001b[0m"
+      "keyIcon": "\u001b[38;5;159m├ \u001b[0m",
     },
     {
       "type": "custom",
-      "format": "\u001b[38;5;159m├─────────────────────── Memory ──────────────────────┤\u001b[0m"
+      "format": "\u001b[38;5;159m├─────────────────────── Memory ──────────────────────┤\u001b[0m",
     },
     {
       "type": "memory",
@@ -170,8 +165,8 @@
       "percent": {
         "green": 50,
         "yellow": 80,
-        "type": 0
-      }
+        "type": 0,
+      },
     },
     {
       "type": "swap",
@@ -179,26 +174,26 @@
       "percent": {
         "green": 50,
         "yellow": 80,
-        "type": 0
+        "type": 0,
       },
       "keyIcon": "\u001b[38;5;159m├ 󰓡\u001b[0m",
-      "separate": false
+      "separate": false,
     },
     {
       "type": "disk",
       "key": "\u001b[94mPartition\u001b[0m",
       "keyIcon": "\u001b[38;5;159m├ \u001b[0m",
       "showRegular": true,
-      "showReadOnly": false,
+      "showReadOnly": true,
       "percent": {
         "green": 50,
         "yellow": 80,
-        "type": 0
-      }
+        "type": 0,
+      },
     },
     {
       "type": "custom",
-      "format": "\u001b[38;5;159m╰─────────────────────────────────────────────────────╯\u001b[0m"
+      "format": "\u001b[38;5;159m╰─────────────────────────────────────────────────────╯\u001b[0m",
     },
 
     "break",
@@ -210,11 +205,8 @@
       "paddingLeft": 1,
       "block": {
         "width": 3,
-        "range": [
-          0,
-          15
-        ]
-      }
-    }
-  ]
+        "range": [0, 15],
+      },
+    },
+  ],
 }
