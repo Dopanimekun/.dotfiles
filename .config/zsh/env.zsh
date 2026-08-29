@@ -1,2 +1,2 @@
-export PATH="$HOME/.local/share/gem/ruby/$(ls $HOME/.local/share/gem/ruby)/bin:$HOME/.scripts:$PATH"
+export PATH="$HOME/.local/share/gem/ruby/$(ls $HOME/.local/share/gem/ruby)/bin:$HOME/.scripts:$HOME/.cargo/bin:$PATH"
 
